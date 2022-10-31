@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		
+	</head>
+	<body>
+		<img src="img/CC.jpg"  width="600px" height="500px"/><br />
+		<input type="text" id="BB" onblur="a()"/>	
+	</body>
+	<script>
+		function a(){
+			alert("您输入了什么呢?")
+			var a = document.getElementById("BB").value;
+			if(a!=null&&a!=""){
+				alert("您输入的是:"+a)
+			}
+		}
+	</script>
+</html>
