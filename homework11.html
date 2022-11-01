@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function myFunction(){
+				document.getElementById('text2').value = document.getElementById('text1').value;
+				 var text1= document.getElementById("text1").value;
+				 var text2= document.getElementById("text2").value;
+				if (text1==text2){
+					document.getElementById("txt1Span").innerHTML = "复制成功";
+					return true;
+				}
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<input type="text" id="text1"/>
+		<input type="button" value="复制" onclick="myFunction()"/>
+		<input type="text" id="text2"/><br />	
+		<span id="txt1Span" style="color: blue;font-family: 楷体"></span>
+	</body>
+</html>

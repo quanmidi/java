@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form>
+			输入用户名:<input type="text" required=""/><br /><br />
+			输入密码:<input type="password" id="pwd1" name="pwd1" onblur="isPwd()"/><br />
+			<span id="pwd1Span"  style="color: red;font-family: 楷体"></span><br/>
+			确认密码:<input type="password" id="pwd2" name="pwd2" onblur="isCom()"/><br />
+			<span id="pwd2Span" style="color: red;font-family: 楷体"></span></p>
+			<input type="submit" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="reset" /> 
+		</form>
+	</body>
+	<script>
+		function isPwd(){
+			var text = document.getElementById("pwd1").value;
+			var re = /^[1-9]\d{6,100}$/;
+
+			var result = re.test(text);
+			if(!result){
+				document.getElementById("pwd1Span").innerHTML = "密码不能少于6位数";
+				 return false;
+				            }else {
+				                document.getElementById("pwd1Span").innerHTML = "";
+				                return true;
+				            }
+				        };
+				        function isCom(){
+				            var text1= document.getElementById("pwd1").value;
+				            var text2= document.getElementById("pwd2").value;
+				            if (text2 == text1){
+				                document.getElementById("pwd2Span").innerHTML = "";
+				                return true;
+				            }else {
+				                document.getElementById("pwd2Span").innerHTML = "两次输入的密码不一致";
+				                return false;
+				            }
+				        }
+			
+		
+	</script>
+</html>
